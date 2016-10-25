@@ -252,7 +252,7 @@ li a {
 }
 
 li {
-    font-family: "Lato", Calibri;
+    font-family: "PT Sans", Calibri;
     font-size: 20px;
     text-align: center;
     border-bottom: 2px solid transparent;
@@ -278,7 +278,7 @@ li {
 }
 
 h1, h2, h3 {
-    font-family: "Montserrat", "Century Gothic";
+    font-family: "PT Sans", "Montserrat", "Century Gothic";
 }
 
 h1 {
@@ -291,7 +291,7 @@ h3 {
 
 p {
     font-family: "Lato", Calibri;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 600px) {
