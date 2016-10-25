@@ -13,14 +13,14 @@ $(document).ready(function() {
     }
 
     //colour changes on home page based on cursor position
-    $(document).mousemove(function(e){
+    /*$(document).mousemove(function(e){
         var $width = ($(document).width())/255;
         var $height = ($(document).height())/255;
         var $pageX = parseInt(e.pageX / $width, 10);
         var $pageY = parseInt(e.pageY / $height, 10);
         $('#home-header').css('color', 'rgb('+(255-$pageX)+', 0,'+(255-$pageY)+')');
         $('.home-container').css('color', 'rgb('+$pageX+','+$pageY+', 255)');
-    });
+    });*/
 
     //smooth scrolling
     $("a").on('click', function(event) {
@@ -77,6 +77,8 @@ $(document).ready(function() {
             $('#about-nav').css('background-color', 'rgb(53, 1, 126)');
             previous_id = 'about-nav';
         }
+    }, {
+        offset: '1%'
     });
 
     $('#about').waypoint(function(direction) {
@@ -95,6 +97,8 @@ $(document).ready(function() {
             $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
             previous_id = 'projects-nav';
         }
+    }, {
+            offset: '1%'
     });
 
     $('#projects').waypoint(function(direction) {
@@ -113,6 +117,8 @@ $(document).ready(function() {
             $('#contact-nav').css('background-color', 'rgb(189, 71, 0)');
             previous_id = 'contact-nav';
         }
+    }, {
+        offset: '1%'
     });
 
     $('#contact').waypoint(function(direction) {

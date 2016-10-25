@@ -211,6 +211,10 @@ body {
     height: 80px;
 }
 
+.contact-link:hover {
+    opacity: 0.8;
+}
+
 .contact-logo {
     align-self: flex-start;
     width: 80px;
