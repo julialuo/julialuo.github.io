@@ -55,16 +55,16 @@ $(document).ready(function() {
 
     $('#home').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#home-nav').css('background-color', 'rgb(65, 65, 65');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#home-nav').css('background-color', 'rgba(50, 50, 50, 0.7');
             previous_id = 'home-nav';
         }
     });
 
     $('#home').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#home-nav').css('background-color', 'rgb(65, 65, 65)'); //rgb(181, 170, 255)
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#home-nav').css('background-color', 'rgba(50, 50, 50, 0.7)'); //rgb(181, 170, 255)
             previous_id = 'home-nav';
         }
     }, {
@@ -73,8 +73,8 @@ $(document).ready(function() {
 
     $('#about').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#about-nav').css('background-color', 'rgb(53, 1, 126)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#about-nav').css('background-color', 'rgba(103, 51, 128, 0.7)');
             previous_id = 'about-nav';
         }
     }, {
@@ -83,8 +83,8 @@ $(document).ready(function() {
 
     $('#about').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#about-nav').css('background-color', 'rgb(53, 1, 126)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#about-nav').css('background-color', 'rgba(103, 51, 128, 0.7)');
             previous_id = 'about-nav';
         }
     }, {
@@ -93,8 +93,8 @@ $(document).ready(function() {
 
     $('#projects').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#projects-nav').css('background-color', 'rgba(126, 0, 64, 0.7)');
             previous_id = 'projects-nav';
         }
     }, {
@@ -103,8 +103,8 @@ $(document).ready(function() {
 
     $('#projects').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#projects-nav').css('background-color', 'rgba(126, 0, 64, 0.7)');
             previous_id = 'projects-nav';
         }
     }, {
@@ -113,8 +113,8 @@ $(document).ready(function() {
 
     $('#contact').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#contact-nav').css('background-color', 'rgb(189, 71, 0)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#contact-nav').css('background-color', 'rgba(192, 85, 63, 0.7)');
             previous_id = 'contact-nav';
         }
     }, {
@@ -123,8 +123,8 @@ $(document).ready(function() {
 
     $('#contact').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgb(9, 38, 68)');
-            $('#contact-nav').css('background-color', 'rgb(189, 71, 0)');
+            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
+            $('#contact-nav').css('background-color', 'rgba(203, 79, 18, 0.7)');
             previous_id = 'contact-nav';
         }
     }, {
