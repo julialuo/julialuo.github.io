@@ -6,10 +6,10 @@ $(document).ready(function() {
 
     //check window size when document loads
     if($(window).width() <= 600) {
-        $("#profile-pic").attr("src", "assets/images/profilepic cropped.png");
+        $("#profile-pic").attr("src", "assets/images/pic2 cropped.png");
     }
     else {
-        $("#profile-pic").attr("src", "assets/images/profilepic.png");
+        $("#profile-pic").attr("src", "assets/images/pic2.png");
     }
 
     //colour changes on home page based on cursor position
@@ -43,11 +43,11 @@ $(document).ready(function() {
     //check window size again whenever window is resized
     window.onresize = function () {
         if($(window).width() <= 600) {
-            $("#profile-pic").attr("src", "assets/images/profilepic cropped.png");
+            $("#profile-pic").attr("src", "assets/images/pic2 cropped.png");
             
         }
         else {
-            $("#profile-pic").attr("src", "assets/images/profilepic.png");
+            $("#profile-pic").attr("src", "assets/images/pic2.png");
         }
     }
 
