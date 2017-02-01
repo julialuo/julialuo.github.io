@@ -52,19 +52,21 @@ $(document).ready(function() {
     }
 
     var previous_id = 'home-nav';
+    var unselected_color = 'rgba(9, 38, 68, 0.7)';
+    var offset_val = '1%';
 
     $('#home').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#home-nav').css('background-color', 'rgba(50, 50, 50, 0.7');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#home-nav').css('background-color', 'rgb(50, 50, 50)');
             previous_id = 'home-nav';
         }
     });
 
     $('#home').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#home-nav').css('background-color', 'rgba(50, 50, 50, 0.7)'); //rgb(181, 170, 255)
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#home-nav').css('background-color', 'rgb(50, 50, 50)'); //rgb(181, 170, 255)
             previous_id = 'home-nav';
         }
     }, {
@@ -73,18 +75,27 @@ $(document).ready(function() {
 
     $('#about').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#about-nav').css('background-color', 'rgba(103, 51, 128, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
             previous_id = 'about-nav';
+            offset_val = '-1%';
+            console.log(offset_val);
+        }
+        else if (direction == 'up') {
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
+            previous_id = 'about-nav';
+            offset_val = '1%';
+            console.log(offset_val);
         }
     }, {
-        offset: '1%'
+        offset: offset_val
     });
 
     $('#about').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#about-nav').css('background-color', 'rgba(103, 51, 128, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
             previous_id = 'about-nav';
         }
     }, {
@@ -93,8 +104,8 @@ $(document).ready(function() {
 
     $('#projects').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#projects-nav').css('background-color', 'rgba(126, 0, 64, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
             previous_id = 'projects-nav';
         }
     }, {
@@ -103,8 +114,8 @@ $(document).ready(function() {
 
     $('#projects').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#projects-nav').css('background-color', 'rgba(126, 0, 64, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
             previous_id = 'projects-nav';
         }
     }, {
@@ -113,8 +124,8 @@ $(document).ready(function() {
 
     $('#contact').waypoint(function(direction) {
         if (direction == 'down') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#contact-nav').css('background-color', 'rgba(192, 85, 63, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#contact-nav').css('background-color', 'rgb(192, 85, 63)');
             previous_id = 'contact-nav';
         }
     }, {
@@ -123,8 +134,8 @@ $(document).ready(function() {
 
     $('#contact').waypoint(function(direction) {
         if (direction == 'up') {
-            $('#' + previous_id).css('background-color', 'rgba(9, 38, 68, 0.7)');
-            $('#contact-nav').css('background-color', 'rgba(203, 79, 18, 0.7)');
+            $('#' + previous_id).css('background-color', unselected_color);
+            $('#contact-nav').css('background-color', 'rgb(203, 79, 18)');
             previous_id = 'contact-nav';
         }
     }, {
