@@ -6,10 +6,10 @@ $(document).ready(function() {
 
     //check window size when document loads
     if($(window).width() <= 600) {
-        $("#profile-pic").attr("src", "assets/images/pic2 cropped.png");
+        $("#profile-pic").attr("src", "assets/images/mdb_cropped.png");
     }
     else {
-        $("#profile-pic").attr("src", "assets/images/pic2.png");
+        $("#profile-pic").attr("src", "assets/images/mdb.png");
     }
 
     //colour changes on home page based on cursor position
@@ -43,30 +43,32 @@ $(document).ready(function() {
     //check window size again whenever window is resized
     window.onresize = function () {
         if($(window).width() <= 600) {
-            $("#profile-pic").attr("src", "assets/images/pic2 cropped.png");
+            $("#profile-pic").attr("src", "assets/images/mdb_cropped.png");
             
         }
         else {
-            $("#profile-pic").attr("src", "assets/images/pic2.png");
+            $("#profile-pic").attr("src", "assets/images/mdb.png");
         }
     }
 
     var previous_id = 'home-nav';
-    var unselected_color = 'rgba(9, 38, 68, 0.7)';
-    var offset_val = '1%';
+    var unselected_color = 'rgba(0, 0, 0, 0)';
+    var selected_color = 'rgba(0, 0, 0, 0.2)';
 
     $('#home').waypoint(function(direction) {
         if (direction == 'down') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#home-nav').css('background-color', 'rgb(50, 50, 50)');
+            $('#home-nav').css('background-color', selected_color);
             previous_id = 'home-nav';
         }
+    }, {
+        offset: '1%'
     });
 
     $('#home').waypoint(function(direction) {
         if (direction == 'up') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#home-nav').css('background-color', 'rgb(50, 50, 50)'); //rgb(181, 170, 255)
+            $('#home-nav').css('background-color', selected_color); //rgb(181, 170, 255)
             previous_id = 'home-nav';
         }
     }, {
@@ -76,26 +78,17 @@ $(document).ready(function() {
     $('#about').waypoint(function(direction) {
         if (direction == 'down') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
+            $('#about-nav').css('background-color', selected_color);
             previous_id = 'about-nav';
-            offset_val = '-1%';
-            console.log(offset_val);
-        }
-        else if (direction == 'up') {
-            $('#' + previous_id).css('background-color', unselected_color);
-            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
-            previous_id = 'about-nav';
-            offset_val = '1%';
-            console.log(offset_val);
         }
     }, {
-        offset: offset_val
+        offset: '1%'
     });
 
     $('#about').waypoint(function(direction) {
         if (direction == 'up') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#about-nav').css('background-color', 'rgb(103, 51, 128)');
+            $('#about-nav').css('background-color', selected_color);
             previous_id = 'about-nav';
         }
     }, {
@@ -105,7 +98,7 @@ $(document).ready(function() {
     $('#projects').waypoint(function(direction) {
         if (direction == 'down') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
+            $('#projects-nav').css('background-color', selected_color);
             previous_id = 'projects-nav';
         }
     }, {
@@ -115,7 +108,7 @@ $(document).ready(function() {
     $('#projects').waypoint(function(direction) {
         if (direction == 'up') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#projects-nav').css('background-color', 'rgb(126, 0, 64)');
+            $('#projects-nav').css('background-color', selected_color);
             previous_id = 'projects-nav';
         }
     }, {
@@ -125,7 +118,7 @@ $(document).ready(function() {
     $('#contact').waypoint(function(direction) {
         if (direction == 'down') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#contact-nav').css('background-color', 'rgb(192, 85, 63)');
+            $('#contact-nav').css('background-color', selected_color);
             previous_id = 'contact-nav';
         }
     }, {
@@ -135,7 +128,7 @@ $(document).ready(function() {
     $('#contact').waypoint(function(direction) {
         if (direction == 'up') {
             $('#' + previous_id).css('background-color', unselected_color);
-            $('#contact-nav').css('background-color', 'rgb(203, 79, 18)');
+            $('#contact-nav').css('background-color', selected_color);
             previous_id = 'contact-nav';
         }
     }, {

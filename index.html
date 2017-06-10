@@ -8,9 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-    <img src = "assets/images/background3.jpg" class="background-image">
+    <div class="background-image">
+    </div>
+
     <ul class="fade-in">
         <li><a id = "home-nav" href="#home">Home</a></li>
         <li><a id = "about-nav" href="#about">About</a></li>
@@ -20,7 +24,7 @@
 
     <div id = "home" class = "fade-in slide">
         <div class = "header-container">
-            <div class = "header-content" id = "home-header" style = "color: white;">
+            <div class = "header-content">
                 <h1>Julia Luo</h1>
             </div>
         </div>
@@ -30,18 +34,18 @@
     </div>
     <div id = "about" class = "slide">
         <div class = "header-container">
-            <div class = "header-content" style = "color: white;">
-                <h1>About Me</h1>
+            <div class = "header-content">
+                <h2>About Me</h2>
             </div>
         </div>
         <div class = "about-container">
             <img id = "profile-pic">
             <div class = "about-content">
-                <p style="padding: 2% 0;">Hi! I am Julia Luo, a China-born and Canada-raised software engineer. I am currently a freshman
+                <p style="padding: 2% 0;">Hi! I am Julia Luo, a China-born and Canada-raised software engineer. I am currently a sophomore
                     at UC Berkeley studying towards an Electrical Engineering and Computer Science major, and I love
-                    programming and design. Currently, I am proficient in Python, Java, HTML/CSS, and Javascript,
-                    and can use Android Studio to create Android apps. I am also familiar with Git, the Microsoft
-                    Office series, and Adobe Photoshop. <br> <br>
+                    programming and design. I am proficient in Python, Java, HTML, CSS, and Javascript, as well as English, Chinese,
+                    and French (okay, well not exactly fluent in the last two). Also, I can use Android Studio and Firebase
+                    as well as React Native to create mobile apps. <br> <br>
 
                     My less nerdy hobbies include soccer, which I have played competitively up until college,
                     and snowboarding, which is a must for every winter. Also, I love both traditional and digital
@@ -51,66 +55,62 @@
     </div>
     <div id = "projects" class = "slide">
         <div class = "header-container">
-            <div class = "header-content" style = "color: white; padding-bottom: 2%">
-                <h1>Projects</h1>
+            <div class = "header-content" style = "padding-bottom: 2%">
+                <h2>Projects</h2>
             </div>
         </div>
         <div class = "projects-container">
             <div class = "project-slide">
-                <a href="http://devpost.com/software/bias-bars" target="_blank">
-                    <img src = "assets/images/project1.png" class = "project-pic">
-                </a>
-                <div class = "project-info">
-                    <div class = "project-title">
-                        <h3>Ethos</h3>
-                    </div>
-                    <div class = "project-description">
-                        <p>Chrome extension that reports bias in articles and generates author profiles using IBM Watson.
-                            Won social impact award at Calhacks 3.0.</p>
-                    </div>
-                    <div class = "project-description" style = "color:white;">
-                        <p>~400 lines JavaScript &nbsp ~110 lines HTML &nbsp ~230 lines Python</p>
-                    </div>
+                <img src = "assets/images/project4.png" class = "project-pic">
+                <div class = "project-title">
+                    <h4>Preserve</h4>
+                </div>
+                <div class = "project-description">
+                    <p><a href="https://play.google.com/store/apps/details?id=com.finalproject.mdb.preserve&hl=en" target="_blank">Play Store</a>&nbsp;|&nbsp;<a href="https://github.com/erikon/Preserve" target="_blank">Github</a></p>
                 </div>
             </div>
             <div class = "project-slide">
-                <a href="https://github.com/julialuo/Grade-and-GPA-Calculator" target="_blank">
-                    <img src = "assets/images/project2.png" class = "project-pic">
-                </a>
-                <div class = "project-info">
-                    <div class = "project-title">
-                        <h3>Grade & GPA Calculator</h3>
-                    </div>
-                    <div class = "project-description">
-                        <p>Simple Android app that calculates your class grades and overall GPA. Built with Java, SQLite, and XML in Android Studio.</p>
-                    </div>
-                    <div class = "project-description" style = "color:white;">
-                        <p>~1350 lines Java &nbsp ~200 lines SQL &nbsp ~900 lines XML</p>
-                    </div>
+                <img src = "assets/images/project1.png" class = "project-pic">
+                <div class = "project-title">
+                    <h4>Ethos</h4>
+                </div>
+                <div class = "project-description">
+                    <p><a href="http://devpost.com/software/bias-bars" target="_blank">Devpost</a>&nbsp;|&nbsp;<a href="https://github.com/julialuo/calhacks" target="_blank">Github</a></p>
                 </div>
             </div>
             <div class = "project-slide">
-                <a href="https://github.com/julialuo/Personal-Website" target="_blank">
-                    <img src = "assets/images/project3.png" class = "project-pic">
-                </a>
-                <div class = "project-info">
-                    <div class = "project-title">
-                        <h3>Personal Website</h3>
-                    </div>
-                    <div class = "project-description">
-                        <p>This website, built from scratch using HTML, CSS, and Javascript/JQuery.</p>
-                    </div>
-                    <div class = "project-description" style = "color:white;">
-                        <p>~137 lines HTML &nbsp ~340 lines CSS &nbsp ~130 lines Javascript</p>
-                    </div>
+                <img src = "assets/images/project4.png" class = "project-pic">
+                <div class = "project-title">
+                    <h4>Petreon</h4>
+                </div>
+                <div class = "project-description">
+                    <p><a href="https://devpost.com/software/petreon" target="_blank">Devpost</a>&nbsp;|&nbsp;<a href="https://github.com/ellenluo/treehacks-2017" target="_blank">Github</a></p>
+                </div>
+            </div>
+            <div class = "project-slide">
+                <img src = "assets/images/project2.png" class = "project-pic">
+                <div class = "project-title">
+                    <h4>Grade & GPA Calculator</h4>
+                </div>
+                <div class = "project-description">
+                    <p><a href="https://github.com/julialuo/Grade-and-GPA-Calculator" target="_blank">Github</a></p>
+                </div>
+            </div>
+            <div class = "project-slide">
+                <img src = "assets/images/project3.png" class = "project-pic">
+                <div class = "project-title">
+                    <h4>Personal Website</h4>
+                </div>
+                <div class = "project-description">
+                    <p><a href="https://github.com/julialuo/Personal-Website" target="_blank">Github</a></p>
                 </div>
             </div>
         </div>
     </div>
     <div id = "contact" class = "slide">
         <div class = "header-container">
-            <div class = "header-content" style = "color: white">
-                <h1>Contact Me</h1>
+            <div class = "header-content">
+                <h2>Contact Me</h2>
             </div>
         </div>
         <div class = "contact-container">
@@ -138,6 +138,5 @@
     <script src = "assets/js/jquery-3.0.0.min.js"></script>
     <script src = "assets/js/jquery.waypoints.min.js"></script>
     <script src = "assets/js/main.js"></script>
-
 </body>
 </html>
