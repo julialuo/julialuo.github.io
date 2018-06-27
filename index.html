@@ -4,152 +4,127 @@
     <meta charset="UTF-8">
     <title>Julia Luo</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
 </head>
 <body>
-    <div class="background-image">
-    </div>
+<div class="background-image"></div>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
 
+<div id="content">
     <ul class="fade-in">
         <li><a id = "home-nav" href="#home">Home</a></li>
         <li><a id = "about-nav" href="#about">About</a></li>
         <li><a id = "projects-nav" href="#projects">Projects</a></li>
-        <li><a id = "contact-nav" href="#contact">Contact</a></li>
+        <li><a href="assets/Resume.pdf" target="_blank">Resume</a></li>
     </ul>
 
     <div id = "home" class = "fade-in slide">
-        <div class = "header-container">
-            <div class = "header-content">
-                <h1>Julia Luo</h1>
+        <div class = "content-container">
+            <div class = "header-container">
+                <div class = "header-content">
+                    <h1>JULIA LUO</h1>
+                </div>
+            </div>
+            <div class = "home-content">
+                <a href = "mailto:julialuo@berkeley.edu" target="_blank" class = "contact-link">
+                    <img src = "assets/images/contact%20logos/email_dark.png" class = "contact-logo">
+                </a>
+                <a href = "https://www.facebook.com/juliazluo" target="_blank" class = "contact-link">
+                    <img src = "assets/images/contact%20logos/facebook_dark.png" class = "contact-logo">
+                </a>
+                <a href = "https://ca.linkedin.com/in/julia-luo-008962124" target="_blank" class = "contact-link">
+                    <img src = "assets/images/contact%20logos/linkedin_dark.png" class = "contact-logo">
+                </a>
+                <a href = "https://github.com/julialuo" target="_blank" class = "contact-link">
+                    <img src = "assets/images/contact%20logos/github_dark.png" class = "contact-logo">
+                </a>
+                <a href = "assets/Resume.pdf" target="_blank" class = "contact-link">
+                    <img src = "assets/images/contact%20logos/resume.png" class = "contact-logo">
+                </a>
             </div>
         </div>
-        <div class = "home-container">
-            <h3>Innovator. Programmer. Designer.</h3>
-        </div>
-        <div class = "container_footer"></div>
+        <img class = "side-pic" src = "assets/images/julia_bw.png">
     </div>
     <div id = "about" class = "slide">
-        <div class = "header-container">
-            <div class = "header-content">
-                <h2>About Me</h2>
+        <div class = "content-container">
+            <div class = "header-container">
+                <div class = "header-content">
+                    <h1>ABOUT ME</h1>
+                </div>
             </div>
-        </div>
-        <div class = "about-container">
-            <img id = "profile-pic">
-            <div class = "about-content">
-                <p style="padding: 2% 0;">Hi! I am Julia Luo, a China-born and Canada-raised software engineer. I am currently a sophomore
-                    at UC Berkeley studying towards an Electrical Engineering and Computer Science major, and I love
-                    both the software engineering and research sides of computer science. I worked on the YouTube backend team last summer
-                    at Google, and will be joining the (much smaller) team at Stripe this summer. Also, I am trying out research this semester
-                    in the Robotic AI & Learning Lab under Sergey Levine. I am always looking for opportunities in both industry and
-                    research to expand my knowledge and experience!<br> <br>
+            <div class = "paragraph-content">
+                <p style="padding: 2% 0;">Hi! I am Julia Luo, a China-born and Canada-raised software engineer. I'm a rising junior
+                    at UC Berkeley studying Electrical Engineering and Computer Science, and I love
+                    both the engineering and research sides of computer science. I worked on the YouTube backend team last summer
+                    at Google, and recently joined the user security team at Stripe for this summer. I am also an undergraduate researcher
+                    in the Robotic AI & Learning Lab under Sergey Levine exploring computer vision and robotics.<br> <br>
 
-                    My less nerdy hobbies include soccer, which I have played competitively up until college,
-                    and snowboarding, which is a must for every winter. Also, I love both traditional and digital
-                    art, especially acrylic painting and sketching, and can play the piano and bass clarinet.</p>
+                    My less nerdy hobbies include soccer (both watching and playing) and snowboarding (rep'ing Canada). Also, I love both traditional and digital
+                    art, and can play the piano and bass clarinet.</p>
             </div>
         </div>
-        <div class = "container_footer"></div>
+        <img class = "side-pic" src = "assets/images/about_pic.png">
     </div>
+
     <div id = "projects" class = "slide">
-        <div class = "header-container">
-            <div class = "header-content" style = "padding-bottom: 2%">
-                <h2>Projects</h2>
+        <div class = "content-container">
+            <div class = "header-container">
+                <div class = "header-content">
+                    <h1>PROJECTS</h1>
+                </div>
+            </div>
+            <div class = "paragraph-content">
+                <p style="padding: 2% 0;">These are some of the projects I've worked on in the past
+                    from various hackathons, clubs, or just by myself for practice. I also dedicate alot of my time to CodeBase, a student
+                    organization at Berkeley which is contracted to do software engineering work for local start-ups every semester. Check
+                    out some of our past work at <a href="https://codebase.berkeley.edu" target="_blank"> https://codebase.berkeley.edu/.</a></p>
             </div>
         </div>
-        <div class = "projects-container">
-            <div class = "project-slide">
-                <img src = "assets/images/project6.png" class = "project-pic">
-                <div class = "project-title">
+
+        <div class="projects-container">
+            <div class="project-content" id="project1">
+                <div class="project-title" id="project1-title">
                     <h4>League of Legends Champion Picker</h4>
                 </div>
-                <div class = "project-description">
+                <div class="project-links" id="project1-links">
                     <p><a href="https://devpost.com/software/league-of-legends-champion-chooser" target="_blank">Devpost</a>&nbsp;|&nbsp;<a href="https://github.com/zgovani/lol-champion-picker" target="_blank">Github</a></p>
                 </div>
             </div>
-            <div class = "project-slide">
-                <img src = "assets/images/project4.png" class = "project-pic">
-                <div class = "project-title">
+            <div class="project-content" id="project2">
+                <div class="project-title" id="project2-title">
                     <h4>Preserve</h4>
                 </div>
-                <div class = "project-description">
+                <div class="project-links" id="project2-links">
                     <p><a href="https://play.google.com/store/apps/details?id=com.finalproject.mdb.preserve&hl=en" target="_blank">Play Store</a>&nbsp;|&nbsp;<a href="https://github.com/erikon/Preserve" target="_blank">Github</a></p>
                 </div>
             </div>
-            <div class = "project-slide">
-                <img src = "assets/images/project1.png" class = "project-pic">
-                <div class = "project-title">
+            <div class="project-content" id="project3">
+                <div class="project-title" id="project3-title">
                     <h4>Ethos</h4>
                 </div>
-                <div class = "project-description">
+                <div class="project-links" id="project3-links">
                     <p><a href="http://devpost.com/software/bias-bars" target="_blank">Devpost</a>&nbsp;|&nbsp;<a href="https://github.com/julialuo/calhacks" target="_blank">Github</a></p>
                 </div>
             </div>
-            <div class = "project-slide">
-                <img src = "assets/images/project5.png" class = "project-pic">
-                <div class = "project-title">
+            <div class="project-content" id="project4">
+                <div class="project-title" id="project4-title">
                     <h4>Petreon</h4>
                 </div>
-                <div class = "project-description">
+                <div class="project-links" id="project4-links">
                     <p><a href="https://devpost.com/software/petreon" target="_blank">Devpost</a>&nbsp;|&nbsp;<a href="https://github.com/ellenluo/treehacks-2017" target="_blank">Github</a></p>
                 </div>
             </div>
-            <div class = "project-slide">
-                <img src = "assets/images/project2.png" class = "project-pic">
-                <div class = "project-title">
-                    <h4>Grade & GPA Calculator</h4>
-                </div>
-                <div class = "project-description">
-                    <p><a href="https://github.com/julialuo/Grade-and-GPA-Calculator" target="_blank">Github</a></p>
-                </div>
-            </div>
-            <div class = "project-slide">
-                <img src = "assets/images/project3.png" class = "project-pic">
-                <div class = "project-title">
-                    <h4>Personal Website</h4>
-                </div>
-                <div class = "project-description">
-                    <p><a href="https://github.com/julialuo/Personal-Website" target="_blank">Github</a></p>
-                </div>
-            </div>
-        </div>
-        <div class = "container_footer"></div>
-    </div>
-    <div id = "contact" class = "slide">
-        <div class = "header-container">
-            <div class = "header-content">
-                <h2>Contact Me</h2>
-            </div>
-        </div>
-        <div class = "contact-container">
-            <a href = "mailto:julialuo@berkeley.edu" target="_blank" class = "contact-link">
-                <img src = "assets/images/contact%20logos/email.png" class = "contact-logo">
-            </a>
-            <a href = "https://www.facebook.com/juliazluo" target="_blank" class = "contact-link">
-                <img src = "assets/images/contact%20logos/facebook.png" class = "contact-logo">
-            </a>
-            <a href = "https://ca.linkedin.com/in/julia-luo-008962124" target="_blank" class = "contact-link">
-                <img src = "assets/images/contact%20logos/linkedin.png" class = "contact-logo">
-            </a>
-            <a href = "https://github.com/julialuo" target="_blank" class = "contact-link">
-                <img src = "assets/images/contact%20logos/github.png" class = "contact-logo">
-            </a>
-            <a href = "assets/Resume.pdf" target="_blank" class = "contact-link">
-                <img src = "assets/images/contact%20logos/resume.png" class = "contact-logo">
-            </a>
-        </div>
-        <div class = "footer">
-            <p>© Julia Luo, 2017</p>
         </div>
     </div>
+</div>
 
-    <script src = "assets/js/jquery-3.0.0.min.js"></script>
-    <script src = "assets/js/jquery.waypoints.min.js"></script>
-    <script src = "assets/js/main.js"></script>
+<script src = "assets/js/jquery-3.0.0.min.js"></script>
+<script src = "assets/js/jquery.waypoints.min.js"></script>
+<script src = "assets/js/jquery-smooth-scroll.js"></script>
+<script src = "assets/js/main.js"></script>
 </body>
 </html>
