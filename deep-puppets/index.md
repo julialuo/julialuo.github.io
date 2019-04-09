@@ -44,7 +44,7 @@ Specifically, for temporal coherence, to generate the $$k$$th frame of our outpu
 
 **Rendering-to-Video Translation**
 
-After obtaining the video frames of our rasterized mesh, our goal is to convert these video frames into our final output video frames, which should resemble our target video. Here we will try a network architecture similar to the Video-to-video synthesis paper from Nvidia$$^6$$ (vid2vid). Specifically, given our sequence of $$T$$ input frames $$\mathbf{s_1^T} = \{\mathbf{s_1}, \ldots, \mathbf{s_T}\}$$ and a sequence of $$T$$ target video frames $$\mathbf{x_1^T} = \{\mathbf{x_1}, \ldots, \mathbf{x_T}\}$$, we want to output reconstructed video frames $$\mathbf{x_1^T'} = \{\mathbf{x_1'}, \ldots, \mathbf{x_T'}\}$$ such that $$\Pr(\mathbf{x_1^T'} \vert \mathbf{s_1^T}) = \Pr(\mathbf{x_1^T} \vert \mathbf{s_1^T})$$.
+After obtaining the video frames of our rasterized mesh, our goal is to convert these video frames into our final output video frames, which should resemble our target video. Here we will try a network architecture similar to the Video-to-video synthesis paper from Nvidia$$^6$$ (vid2vid). Specifically, given our sequence of $$T$$ input frames $$\mathbf{s_1^T} = \{\mathbf{s_1}, \ldots, \mathbf{s_T}\}$$ and a sequence of $$T$$ target video frames $$\mathbf{x_1^T} = \{\mathbf{x_1}, \ldots, \mathbf{x_T}\}$$, we want to output reconstructed video frames $$\mathbf{x_1^T\prime} = \{\mathbf{x_1\prime}, \ldots, \mathbf{x_T\prime}\}$$ such that $$\Pr(\mathbf{x_1^T\prime} \vert \mathbf{s_1^T}) = \Pr(\mathbf{x_1^T} \vert \mathbf{s_1^T})$$.
 
 Here, vid2vid uses a conditional Generative Adversarial Network with a single generator $$G$$ and two conditional discriminators $$D_I$$ and $$D_V$$. The generator $$G$$ produces sequential video frames with a Markov assumption where the current video frame depends on only the past $$L$$ video frames (they ultimately set $$L=2$$ for their experiments). The discriminator $$D_I$$ ensures that that our reconstructed video resembles the target video and thus discriminates between image frames in our reconstructed video and those in the original target video (i.e. it outputs 0 for “fake” video frames and 1 for “real” video frames). The discriminator $$D_V$$ ensures that our reconstructed video has similar temporal dynamics as the original video and discriminates between consecutive frames of the reconstructed video and those of the original video given the optical flow for the past $$K$$ frames of the original video. Then, they train to minimize the GAN loss for each discriminator, $$\max_D~\min_G~\mathbf{E}_{\mathbf{x_1^T}, \mathbf{s_1^T}} [\log D(\mathbf{x_1^T}, \mathbf{s_1^T})] + \mathbf{E}_{\mathbf{s_1^T}} [\log(1-D(G(\mathbf{s_1^T}), \mathbf{s_1^T})]$$ and find the generator the minimizes the sum of the both discriminator losses as well as a flow estimation loss term.
 
@@ -71,12 +71,12 @@ Here, vid2vid uses a conditional Generative Adversarial Network with a single ge
 
 ## Schedule
 
-**4/14** - Complete 3D morphable model with parameters for face identity and expression.
-**4/21** - Complete monocular face reconstruction program and successfully fit identity, expression, and texture parameters to an image of Putin. Render resulting mesh and verify it looks reasonable.
-**4/24** - Complete `generate_conditioning_images.py` program that can synthesize a sequence of 2000 conditioning images of Putin with modified expressions, given an arbitrary source video and a target video of Putin.
-**4/30** - Complete mid-project milestone report.
-**5/3** - Complete render-to-video translation network with preliminary results with arbitrary source video and target video of Putin, both 256x256 resolution and with >1000 frames each.
-**5/14** - Complete final report.
+- **4/14** - Complete 3D morphable model with parameters for face identity and expression.
+- **4/21** - Complete monocular face reconstruction program and successfully fit identity, expression, and texture parameters to an image of Putin. Render resulting mesh and verify it looks reasonable.
+- **4/24** - Complete `generate_conditioning_images.py` program that can synthesize a sequence of 2000 conditioning images of Putin with modified expressions, given an arbitrary source video and a target video of Putin.
+- **4/30** - Complete mid-project milestone report.
+- **5/3** - Complete render-to-video translation network with preliminary results with arbitrary source video and target video of Putin, both 256x256 resolution and with >1000 frames each.
+- **5/14** - Complete final report.
 
 
 ## Resources
