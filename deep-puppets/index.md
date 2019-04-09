@@ -51,6 +51,7 @@ Here, vid2vid uses a conditional Generative Adversarial Network with a single ge
 ## Goals and Deliverables
 
 **Planned Goals**
+
 By our end-of-month milestone, we plan to complete:
 
 - A 3D morphable model with parameters for face identity and expression, and a way to generate and rasterize a mesh using a set of morphable model parameters.
