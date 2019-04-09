@@ -2,7 +2,7 @@
 
 # Deep Puppets: Face Expression Transfer for Videos
 
-Andrew Chan![test](https://latex.codecogs.com/png.latex?%5E1), Jaymo Kang$$^2$$, Julia Luo$$^1$$
+Andrew Chan<sup>1</sup>, Jaymo Kang<sup>2</sup>, Julia Luo<sup>1</sup>
 
 1:  CS 184/CS 280.
 
