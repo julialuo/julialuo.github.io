@@ -7,8 +7,6 @@ Andrew Chan$$^1$$, Jaymo Kang$$^2$$, Julia Luo$$^1$$
 1:  CS 184/CS 280.
 2: CS 280.
 
-[Andrew] NB: We have to create a “project proposal website” for CS 184. Let’s collab on this paper document, then we can transfer the contents to a website later.
-
 ## Summary
 
 We propose a full face reenactment program that - given source and target videos of individual actors’ facial expressions - can synthesize a convincing, photo-realistic re-animation of the target actor using the source actor’s 3D head position, rotation, and face expression.
@@ -44,7 +42,7 @@ Specifically, for temporal coherence, to generate the $$k$$th frame of our outpu
 
 **Rendering-to-Video Translation**
 
-After obtaining the video frames of our rasterized mesh, our goal is to convert these video frames into our final output video frames, which should resemble our target video. Here we will try a network architecture similar to the Video-to-video synthesis paper from Nvidia$$^6$$ (vid2vid). Specifically, given our sequence of $$T$$ input frames $$\mathbf{s_1^T} = \{\mathbf{s_1}, \ldots, \mathbf{s_T}\}$$ and a sequence of $$T$$ target video frames $$\mathbf{x_1^T} = \{\mathbf{x_1}, \ldots, \mathbf{x_T}\}$$, we want to output reconstructed video frames $$\mathbf{x_1^T\prime} = \{\mathbf{x_1\prime}, \ldots, \mathbf{x_T\prime}\}$$ such that $$\Pr(\mathbf{x_1^T\prime} \vert \mathbf{s_1^T}) = \Pr(\mathbf{x_1^T} \vert \mathbf{s_1^T})$$.
+After obtaining the video frames of our rasterized mesh, our goal is to convert these video frames into our final output video frames, which should resemble our target video. Here we will try a network architecture similar to the Video-to-video synthesis paper from Nvidia$$^6$$ (vid2vid). Specifically, given our sequence of $$T$$ input frames $$\mathbf{s_1^T} = \{\mathbf{s_1}, \ldots, \mathbf{s_T}\}$$ and a sequence of $$T$$ target video frames $$\mathbf{x_1^T} = \{\mathbf{x_1}, \ldots, \mathbf{x_T}\}$$, we want to output reconstructed video frames $$\mathbf{x_1^{T\prime}} = \{\mathbf{x_1^\prime}, \ldots, \mathbf{x_T^\prime}\}$$ such that $$\Pr(\mathbf{x_1^{T\prime}} \vert \mathbf{s_1^T}) = \Pr(\mathbf{x_1^T} \vert \mathbf{s_1^T})$$.
 
 Here, vid2vid uses a conditional Generative Adversarial Network with a single generator $$G$$ and two conditional discriminators $$D_I$$ and $$D_V$$. The generator $$G$$ produces sequential video frames with a Markov assumption where the current video frame depends on only the past $$L$$ video frames (they ultimately set $$L=2$$ for their experiments). The discriminator $$D_I$$ ensures that that our reconstructed video resembles the target video and thus discriminates between image frames in our reconstructed video and those in the original target video (i.e. it outputs 0 for “fake” video frames and 1 for “real” video frames). The discriminator $$D_V$$ ensures that our reconstructed video has similar temporal dynamics as the original video and discriminates between consecutive frames of the reconstructed video and those of the original video given the optical flow for the past $$K$$ frames of the original video. Then, they train to minimize the GAN loss for each discriminator, $$\max_D~\min_G~\mathbf{E}_{\mathbf{x_1^T}, \mathbf{s_1^T}} [\log D(\mathbf{x_1^T}, \mathbf{s_1^T})] + \mathbf{E}_{\mathbf{s_1^T}} [\log(1-D(G(\mathbf{s_1^T}), \mathbf{s_1^T})]$$ and find the generator the minimizes the sum of the both discriminator losses as well as a flow estimation loss term.
 
@@ -70,7 +68,6 @@ Here, vid2vid uses a conditional Generative Adversarial Network with a single ge
 
 
 ## Schedule
-
 - **4/14** - Complete 3D morphable model with parameters for face identity and expression.
 - **4/21** - Complete monocular face reconstruction program and successfully fit identity, expression, and texture parameters to an image of Putin. Render resulting mesh and verify it looks reasonable.
 - **4/24** - Complete `generate_conditioning_images.py` program that can synthesize a sequence of 2000 conditioning images of Putin with modified expressions, given an arbitrary source video and a target video of Putin.
@@ -88,5 +85,6 @@ Here, vid2vid uses a conditional Generative Adversarial Network with a single ge
 6. Wang, Ting-Chun, et al. "Video-to-video synthesis." [arXiv preprint arXiv:1808.06601](https://arxiv.org/abs/1808.06601) (2018).
 7. Volker Blanz and Thomas Vetter. 1999. A morphable model for the synthesis of 3D faces. In Proceedings of the 26th annual conference on Computer graphics and interactive techniques (SIGGRAPH '99). ACM Press/Addison-Wesley Publishing Co., New York, NY, USA, 187-194. DOI=http://dx.doi.org/10.1145/311535.311556
 8. Pascal Paysan, Reinhard Knothe, Brian Amberg, Sami Romdhani, and Thomas Vetter. 2009. A 3D Face Model for Pose and Illumination Invariant Face Recognition. In *Proceedings of the 2009 Sixth IEEE International Conference on Advanced Video and Signal Based Surveillance* (AVSS '09). IEEE Computer Society, Washington, DC, USA, 296-301. DOI: https://doi.org/10.1109/AVSS.2009.58
+
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
