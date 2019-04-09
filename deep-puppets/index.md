@@ -5,9 +5,8 @@
 Andrew Chan$$^1$$, Jaymo Kang$$^2$$, Julia Luo$$^1$$
 
 1:  CS 184/CS 280.
-2: CS 280.
 
-[Andrew] NB: We have to create a “project proposal website” for CS 184. Let’s collab on this paper document, then we can transfer the contents to a website later.
+2: CS 280.
 
 ## Summary
 
@@ -70,10 +69,15 @@ By our end-of-month milestone, we plan to complete:
 ## Schedule
 
 **4/14** - Complete 3D morphable model with parameters for face identity and expression.
+
 **4/21** - Complete monocular face reconstruction program and successfully fit identity, expression, and texture parameters to an image of Putin. Render resulting mesh and verify it looks reasonable.
+
 **4/24** - Complete `generate_conditioning_images.py` program that can synthesize a sequence of 1000 conditioning images of Putin with modified expressions, given an arbitrary source video and a target video of Putin.
+
 **4/30** - Complete mid-project milestone report.
+
 **5/6** - Complete render-to-video translation network with preliminary results.
+
 **5/14** - Complete final report.
 
 
