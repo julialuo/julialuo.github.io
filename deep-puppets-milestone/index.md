@@ -35,4 +35,4 @@ https://www.dropbox.com/s/yx0cz1uyke3k8u8/output_putin.mp4?dl=0
 2. Tuan Tran, Anh, et al. ["Regressing robust and discriminative 3D morphable models with a very deep neural network."](https://arxiv.org/pdf/1612.04904v1.pdf) Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.
 3. P. Paysan, R. Knothe, B. Amberg, S. Romdhani and T. Vetter, "A 3D Face Model for Pose and Illumination Invariant Face Recognition," *2009 Sixth IEEE International Conference on Advanced Video and Signal Based Surveillance*, Genova, 2009, pp. 296-301. doi: 10.1109/AVSS.2009.58
 
-
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
