@@ -2,7 +2,7 @@
 
 # Final Video
 
-[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888160_Screen+Shot+2019-05-14+at+11.46.54+PM.png)](https://drive.google.com/file/d/1Ov0thgQPjGH4zUf7SZu_U46t5brdbR8b/view)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888160_Screen+Shot+2019-05-14+at+11.46.54+PM.png)](https://drive.google.com/file/d/1Ov0thgQPjGH4zUf7SZu_U46t5brdbR8b/view?usp=sharing)
 
 # Abstract
 
@@ -41,7 +41,7 @@ Below is an example of our conditioning input synthesis of a video of Julia onto
 
 
 <p align="center">
-  <a href="https://drive.google.com/drive/u/1/folders/1J9vYiON931M1Ehr9rBORyI8SUKUHBSnb"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557905991879_Screen+Shot+2019-05-15+at+12.39.18+AM.png" width="600"></a>
+  <a href="https://drive.google.com/file/d/1KU6bQDcKTAOWB3Wz5vL8e1RIyGgBXzgs/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557905991879_Screen+Shot+2019-05-15+at+12.39.18+AM.png" width="600"></a>
 </p>
 
 
@@ -51,7 +51,7 @@ Below is a comparison of the rasterized Putin mesh with and without the camera s
 
 Without smoothing |   With smoothing
 :-------------------------:|:-------------------------:
-<a href="https://drive.google.com/a/berkeley.edu/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902849592_Screen+Shot+2019-05-14+at+11.45.52+PM.png" width="500"></a> | <a href="https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902853095_Screen+Shot+2019-05-14+at+11.45.58+PM.png" width="500"></a> |
+<a href="https://drive.google.com/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902849592_Screen+Shot+2019-05-14+at+11.45.52+PM.png" width="500"></a> | <a href="https://drive.google.com/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902853095_Screen+Shot+2019-05-14+at+11.45.58+PM.png" width="500"></a> |
 
 
 ## Head and Facial Reenactment
@@ -62,7 +62,7 @@ Below are two trials of transferring Julia’s face onto Putin’s face — one 
 
 Julia trial with expression + pose |   Julia trial with expression only
 :-------------------------:|:-------------------------:
-<a href="https://drive.google.com/a/berkeley.edu/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888153_Screen+Shot+2019-05-14+at+11.46.43+PM.png" width="500"></a> | <a href="https://drive.google.com/a/berkeley.edu/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859479_Screen+Shot+2019-05-14+at+11.46.35+PM.png" width="500"></a> |
+<a href="https://drive.google.com/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888153_Screen+Shot+2019-05-14+at+11.46.43+PM.png" width="500"></a> | <a href="https://drive.google.com/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859479_Screen+Shot+2019-05-14+at+11.46.35+PM.png" width="500"></a> |
 
 
 **Jaymo onto Putin:**
@@ -70,7 +70,7 @@ Julia trial with expression + pose |   Julia trial with expression only
 Because many of Julia’s expressions and poses are out of distribution, we do another trial on a video of Jaymo making expressions more within Putin’s expression distribution. The result of this trial is shown below, and as expected there is much less flickering. 
 
 <p align="center">
-  <a href="https://drive.google.com/a/berkeley.edu/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557903144613_Screen+Shot+2019-05-14+at+11.52.00+PM.png" width="600"></a>
+  <a href="https://drive.google.com/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557903144613_Screen+Shot+2019-05-14+at+11.52.00+PM.png" width="600"></a>
 </p>
 
 
@@ -84,7 +84,7 @@ where $$C_s, C_i$$ are the synthesized and ground truth RGB images, respectively
 
 Original Putin video and per-pixel error |   Per-pixel and total photometric error for each frame
 :-------------------------:|:-------------------------:
-<a href="https://drive.google.com/a/berkeley.edu/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859471_Screen+Shot+2019-05-14+at+11.46.26+PM.png" width="500"></a> | <a href="https://drive.google.com/a/berkeley.edu/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859465_Screen+Shot+2019-05-14+at+11.46.13+PM.png" width="500"></a> |
+<a href="https://drive.google.com/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859471_Screen+Shot+2019-05-14+at+11.46.26+PM.png" width="500"></a> | <a href="https://drive.google.com/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=sharing"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859465_Screen+Shot+2019-05-14+at+11.46.13+PM.png" width="500"></a> |
 
 
 # References
