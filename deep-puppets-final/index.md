@@ -37,11 +37,11 @@ Adversarial training is hard, and our training process was no exception. Even wi
 
 ## Conditioning Input Synthesis
 
-Below is an example of our conditioning input synthesis of a video of Jaymo onto Putin. Here, we paste Jaymo’s expression parameters onto the parameters of Putin to generate a 3D morphable mesh. The result of rasterizing that mesh is our conditioning input into the GAN and is shown below.
+Below is an example of our conditioning input synthesis of a video of Julia onto Putin. Here, we combine Julia's expression and pose parameters and Putin's identity parameter to generate a 3D morphable mesh. The result of rasterizing that mesh is our conditioning input into the GAN and is shown below.
 
 
 <p align="center">
-  <a href="https://drive.google.com/a/berkeley.edu/file/d/1QNFR8wuuGzFimVpFCuQ9IRwkjB3VlyCE/view?usp=drivesdk"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902372052_Screen+Shot+2019-05-14+at+11.39.04+PM.png" width="600"></a>
+  <a href="https://drive.google.com/drive/u/1/folders/1J9vYiON931M1Ehr9rBORyI8SUKUHBSnb"><img src="https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557905991879_Screen+Shot+2019-05-15+at+12.39.18+AM.png" width="600"></a>
 </p>
 
 
