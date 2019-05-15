@@ -34,6 +34,7 @@ We modify the vid2vid architecture by playing around with the discriminator patc
 Adversarial training is hard, and our training process was no exception. Even with the same parameters, different trials gave us noticeably different results. Thus, it was difficult to discern whether changes we made actually improved results or whether our training process had randomly sampled a better local minimum. Nevertheless, we found that variance in qualitative performance decreased as we increased dataset size and after further tuning we achieve fairly convincing results consistently.
 
 # Results
+
 ## Conditioning Input Synthesis
 
 Below is an example of our conditioning input synthesis of a video of Jaymo onto Putin. Here, we paste Jaymo’s expression parameters onto the parameters of Putin to generate a 3D morphable mesh. The result of rasterizing that mesh is our conditioning input into the GAN and is shown below.
@@ -45,6 +46,7 @@ Below is an example of our conditioning input synthesis of a video of Jaymo onto
 
 
 **Camera Smoothing:**
+
 Below is a comparison of the rasterized Putin mesh with and without the camera smoothing that we added. As you can see, the video without smoothing is much more bumpy and shaky than the video with smoothing.
 
 Without smoothing |   With smoothing
