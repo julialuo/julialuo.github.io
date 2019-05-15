@@ -102,7 +102,7 @@ Original Putin video and per-pixel error |   Per-pixel and total photometric err
 
 # Contributions
 - **Andrew Chan** - Constructed 3D morphable model of identity + expression from combination of Basel Face data [1] and FaceWarehouse expression blendshapes [2]. Wrote face reconstruction, input synthesis script. Wrote data-loader for vid2vid and trained single-image generator pix2pixHD. Generated conditioning input for various datasets and trained various models.
-- **Julia Luo** - Extracted texture parameters from all datasets using CNN from [5] for monocular face reconstruction. Generated conditioning input for various datasets and trained various models. 
+- **Julia Luo** - Extracted texture parameters from all datasets using CNN from [5] for monocular face reconstruction. Generated conditioning input for various datasets and trained various models. Built websites.
 - **Jaymo Kang** - Implemented camera smoothing.
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
