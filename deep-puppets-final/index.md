@@ -34,14 +34,15 @@ Adversarial training is hard, and our training process was no exception. Even wi
 
 Below is an example of our conditioning input synthesis of a video of Jaymo onto Putin. Here, we paste Jaymo’s expression parameters onto the parameters of Putin to generate a 3D morphable mesh. The result of rasterizing that mesh is our conditioning input into the GAN and is shown below.
 
-https://drive.google.com/a/berkeley.edu/file/d/1QNFR8wuuGzFimVpFCuQ9IRwkjB3VlyCE/view?usp=drivesdk
+[Rasterized frames of Jaymo](https://drive.google.com/a/berkeley.edu/file/d/1QNFR8wuuGzFimVpFCuQ9IRwkjB3VlyCE/view?usp=drivesdk)
 
 
 **Camera Smoothing:**
 Below is a comparison of the rasterized Putin mesh with and without the camera smoothing that we added. As you can see, the video without smoothing is much more bumpy and shaky than the video with smoothing.
 
-https://drive.google.com/a/berkeley.edu/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=drivesdk
-https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=drivesdk
+[Without smoothing](https://drive.google.com/a/berkeley.edu/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=drivesdk)
+
+[With smoothing](https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=drivesdk)
 
 
 
@@ -50,13 +51,14 @@ https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7
 **Julia onto Putin:**
 Below are two trials of transferring Julia’s face onto Putin’s face — one with both pose and expression transferred and one with only expression transferred. In the video with both pose and expression, there is noticeable deformation with Putin’s head in the last third of the video when Julia executes dramatic head motions and rotations. This is because our training dataset is the original Putin video and since he does not perform these drastic head motions in the original video, some of our test frames are essentially out of the training distribution. To reduce the effect of our test video being out of distribution, we try only transferring the expression parameters. As you can see, this results in Putin performing the head actions in his original video and mimicking only my expressions. As expected, this results in less deformation in our output video. Notice that there is still flickering present around the frames where Julia’s expression is out of distribution — for example, at the 4 s mark, Julia opens her mouth wide in a shocked expression, which causes flickering because Putin never opens his mouth wide in the original video. 
 
-https://drive.google.com/a/berkeley.edu/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=drivesdk
-https://drive.google.com/a/berkeley.edu/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=drivesdk
+[Julia trial with pose + expression](https://drive.google.com/a/berkeley.edu/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=drivesdk)
 
+[Julia trial with expression only](https://drive.google.com/a/berkeley.edu/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=drivesdk)
 
+**Jaymo onto Putin:**
 Because many of Julia’s expressions and poses are out of distribution, we do another trial on a video of Jaymo making expressions more within Putin’s expression distribution. The result of this trial is shown below, and as expected there is much less flickering. 
 
-https://drive.google.com/a/berkeley.edu/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=drivesdk
+[Jaymo trial](https://drive.google.com/a/berkeley.edu/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=drivesdk)
 
 ## Quantitative Evaluation
 
@@ -67,26 +69,29 @@ $$E_{col}(C_s, C_i) = \frac{1}{|C_i|} \sum_{\mathbf{p} \in C_i} ||C_s(\mathbf{p}
 where $$C_s, C_i$$ are the synthesized and ground truth RGB images, respectively, and $$\mathbf{p} \in C_i$$ denotes all RGB pixels in $$C_i$$. For each frame, we display this error at the top and also generate a heat-map representing the photometric loss at each pixel. The result is shown below (brighter areas correspond to higher photometric loss). First, notice that our error is low for all the frames, hovering at a maximum of ~0.05. Also, notice that the error is highest for regions on Putin’s suit and tie, which makes sense because those areas are outside the reach of our conditioning input (remember that our conditioning input only contains a rasterized face).
 
 
-https://drive.google.com/a/berkeley.edu/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=drivesdk
+[Side-by-side of the original Putin video and error video](https://drive.google.com/a/berkeley.edu/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=drivesdk)
 
-
-
-https://drive.google.com/a/berkeley.edu/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=drivesdk
+[Per-pixel and total photometric error for each frame](https://drive.google.com/a/berkeley.edu/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=drivesdk)
 
 # References
 
 [1] P. Paysan, R. Knothe, B. Amberg, S. Romdhani and T. Vetter, "A 3D Face Model for Pose and Illumination Invariant Face Recognition," *2009 Sixth IEEE International Conference on Advanced Video and Signal Based Surveillance*, Genova, 2009, pp. 296-301. doi: 10.1109/AVSS.2009.58
+
 [2] Chen Cao, Yanlin Weng, Shun Zhou, Yiying Tong, and Kun Zhou. 2014. FaceWarehouse: A 3D Facial Expression Database for Visual Computing. *IEEE Transactions on Visualization and Computer Graphics* 20, 3 (March 2014), 413-425. DOI=http://dx.doi.org/10.1109/TVCG.2013.249
+
 [3] Robert W. Sumner and Jovan Popović. 2004. Deformation transfer for triangle meshes. In *ACM SIGGRAPH 2004 Papers* (SIGGRAPH '04), Joe Marks (Ed.). ACM, New York, NY, USA, 399-405. DOI: https://doi.org/10.1145/1186562.1015736
+
 [4] J. Booth et al., "3D Reconstruction of “In-the-Wild” Faces in Images and Videos," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 40, no. 11, pp. 2638-2652, 1 Nov. 2018. doi: 10.1109/TPAMI.2018.2832138
+
 [5]  Tuan Tran, Anh, et al. ["Regressing robust and discriminative 3D morphable models with a very deep neural network."](https://arxiv.org/pdf/1612.04904v1.pdf) Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.
+
 [6] Wang, Ting-Chun, et al. "Video-to-video synthesis." [arXiv preprint arXiv:1808.06601](https://arxiv.org/abs/1808.06601) (2018).
 
 
 # Contributions
-- **Andrew Chan** - Constructed 3D morphable model of identity + expression from combination of Basel Face data [1] and FaceWarehouse expression blendshapes [2]. Wrote face reconstruction, input synthesis script. Wrote data-loader for vid2vid and trained single-image generator pix2pixHD. Generated conditioning input for various datasets and trained various models. 
+- **Andrew Chan** - Constructed 3D morphable model of identity + expression from combination of Basel Face data [1] and FaceWarehouse expression blendshapes [2]. Wrote face reconstruction, input synthesis script. Wrote data-loader for vid2vid and trained single-image generator pix2pixHD. Generated conditioning input for various datasets and trained various models.
 - **Julia Luo** - Extracted texture parameters from all datasets using CNN from [5] for monocular face reconstruction. Generated conditioning input for various datasets and trained various models. 
 - **Jaymo Kang** - Implemented camera smoothing.
 
-
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
