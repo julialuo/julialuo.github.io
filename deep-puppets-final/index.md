@@ -1,5 +1,9 @@
 # CS 184 Final Project Report
 
+# Final Video
+
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888160_Screen+Shot+2019-05-14+at+11.46.54+PM.png)](https://drive.google.com/file/d/1Ov0thgQPjGH4zUf7SZu_U46t5brdbR8b/view)
+
 # Abstract
 
 Given a source and target video of the faces of two individual actors, our project synthesizes a convincing, photo-realistic re-animation of the target actor using the source actor’s 3D head position, rotation, and face expression. To do this, we first fit a statistical model of a face onto each of the videos using the monocular face reconstruction algorithm. Then, we build a 3D morphable mesh, combining the features of the two faces together, and rasterize this mesh for all frames of the source video in our conditioning input synthesis step. Finally, we use a Generative Adversarial Network to convert this rasterized video into our final photo-realistic video resembling the target video in our rendering-to-video translation step.
@@ -34,16 +38,16 @@ Adversarial training is hard, and our training process was no exception. Even wi
 
 Below is an example of our conditioning input synthesis of a video of Jaymo onto Putin. Here, we paste Jaymo’s expression parameters onto the parameters of Putin to generate a 3D morphable mesh. The result of rasterizing that mesh is our conditioning input into the GAN and is shown below.
 
-[Rasterized frames of Jaymo](https://drive.google.com/a/berkeley.edu/file/d/1QNFR8wuuGzFimVpFCuQ9IRwkjB3VlyCE/view?usp=drivesdk)
-
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902372052_Screen+Shot+2019-05-14+at+11.39.04+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1QNFR8wuuGzFimVpFCuQ9IRwkjB3VlyCE/view?usp=drivesdk)
 
 **Camera Smoothing:**
 Below is a comparison of the rasterized Putin mesh with and without the camera smoothing that we added. As you can see, the video without smoothing is much more bumpy and shaky than the video with smoothing.
 
-[Without smoothing](https://drive.google.com/a/berkeley.edu/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=drivesdk)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902849592_Screen+Shot+2019-05-14+at+11.45.52+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1g5iM29C0jzi95QTleeKc57g1bLUnjQzH/view?usp=drivesdk)
+*Without smoothing*
 
-[With smoothing](https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=drivesdk)
-
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902853095_Screen+Shot+2019-05-14+at+11.45.58+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/13HZ5SUmqHfCpttsgDdY4YBIxzis_Xqc7/view?usp=drivesdk)
+*With smoothing*
 
 
 ## Head and Facial Reenactment
@@ -51,14 +55,16 @@ Below is a comparison of the rasterized Putin mesh with and without the camera s
 **Julia onto Putin:**
 Below are two trials of transferring Julia’s face onto Putin’s face — one with both pose and expression transferred and one with only expression transferred. In the video with both pose and expression, there is noticeable deformation with Putin’s head in the last third of the video when Julia executes dramatic head motions and rotations. This is because our training dataset is the original Putin video and since he does not perform these drastic head motions in the original video, some of our test frames are essentially out of the training distribution. To reduce the effect of our test video being out of distribution, we try only transferring the expression parameters. As you can see, this results in Putin performing the head actions in his original video and mimicking only my expressions. As expected, this results in less deformation in our output video. Notice that there is still flickering present around the frames where Julia’s expression is out of distribution — for example, at the 4 s mark, Julia opens her mouth wide in a shocked expression, which causes flickering because Putin never opens his mouth wide in the original video. 
 
-[Julia trial with pose + expression](https://drive.google.com/a/berkeley.edu/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=drivesdk)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902888153_Screen+Shot+2019-05-14+at+11.46.43+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1DuE9Y7ux-hHUWh9oQtnV3BhL575w2nIp/view?usp=drivesdk)
+*Julia trial with expression + pose*
 
-[Julia trial with expression only](https://drive.google.com/a/berkeley.edu/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=drivesdk)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859479_Screen+Shot+2019-05-14+at+11.46.35+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1I9SFw0VgDpevrCQnWf2sgtGr0uIfxO1U/view?usp=drivesdk)
+*Julia trial with expression only*
 
 **Jaymo onto Putin:**
 Because many of Julia’s expressions and poses are out of distribution, we do another trial on a video of Jaymo making expressions more within Putin’s expression distribution. The result of this trial is shown below, and as expected there is much less flickering. 
 
-[Jaymo trial](https://drive.google.com/a/berkeley.edu/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=drivesdk)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557903144613_Screen+Shot+2019-05-14+at+11.52.00+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1eloBh_K36wkBTK819MqdYZYF478NEDZr/view?usp=drivesdk)
 
 ## Quantitative Evaluation
 
@@ -68,10 +74,11 @@ $$E_{col}(C_s, C_i) = \frac{1}{|C_i|} \sum_{\mathbf{p} \in C_i} ||C_s(\mathbf{p}
 
 where $$C_s, C_i$$ are the synthesized and ground truth RGB images, respectively, and $$\mathbf{p} \in C_i$$ denotes all RGB pixels in $$C_i$$. For each frame, we display this error at the top and also generate a heat-map representing the photometric loss at each pixel. The result is shown below (brighter areas correspond to higher photometric loss). First, notice that our error is low for all the frames, hovering at a maximum of ~0.05. Also, notice that the error is highest for regions on Putin’s suit and tie, which makes sense because those areas are outside the reach of our conditioning input (remember that our conditioning input only contains a rasterized face).
 
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859471_Screen+Shot+2019-05-14+at+11.46.26+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=drivesdk)
+*Side-by-side of the original Putin video and error video*
 
-[Side-by-side of the original Putin video and error video](https://drive.google.com/a/berkeley.edu/file/d/1Z1LlsKxo_HVk4qKDyMchdYHopxDZfFnI/view?usp=drivesdk)
-
-[Per-pixel and total photometric error for each frame](https://drive.google.com/a/berkeley.edu/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=drivesdk)
+[![](https://paper-attachments.dropbox.com/s_2109688FF62BA12CB1B02A20081AC282C7687647F9C90BD2EF7D239C0A242A28_1557902859465_Screen+Shot+2019-05-14+at+11.46.13+PM.png)](https://drive.google.com/a/berkeley.edu/file/d/19Sq8dXccq_tOGnKhJ8HfYWXXYRfUFsvb/view?usp=drivesdk)
+*Per-pixel and total photometric error for each frame*
 
 # References
 
